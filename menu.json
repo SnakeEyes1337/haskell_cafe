@@ -1,0 +1,445 @@
+[
+  {
+    "name": "Салат Цезарь",
+    "category": "Appetizer",
+    "ingredients": [
+      "салат",
+      "курица",
+      "сухари",
+      "сыр",
+      "соус"
+    ],
+    "price": 350.0,
+    "volume": 200.0,
+    "calories": 350.0
+  },
+  {
+    "name": "Греческий салат",
+    "category": "Appetizer",
+    "ingredients": [
+      "огурцы",
+      "томаты",
+      "перец",
+      "оливки",
+      "сыр"
+    ],
+    "price": 300.0,
+    "volume": 180.0,
+    "calories": 250.0
+  },
+  {
+    "name": "Стейк рибай",
+    "category": "MainCourse",
+    "ingredients": [
+      "говядина",
+      "специи",
+      "масло"
+    ],
+    "price": 1200.0,
+    "volume": 300.0,
+    "calories": 600.0
+  },
+  {
+    "name": "Лазанья",
+    "category": "MainCourse",
+    "ingredients": [
+      "макароны",
+      "соус",
+      "сыр",
+      "мясо"
+    ],
+    "price": 800.0,
+    "volume": 400.0,
+    "calories": 750.0
+  },
+  {
+    "name": "Тирамису",
+    "category": "Dessert",
+    "ingredients": [
+      "маскарпоне",
+      "кофе",
+      "печенье",
+      "какао"
+    ],
+    "price": 500.0,
+    "volume": 150.0,
+    "calories": 400.0
+  },
+  {
+    "name": "Чизкейк",
+    "category": "Dessert",
+    "ingredients": [
+      "сыр",
+      "печенье",
+      "сливки"
+    ],
+    "price": 400.0,
+    "volume": 180.0,
+    "calories": 450.0
+  },
+  {
+    "name": "Макароны с сыром",
+    "category": "KidsMeal",
+    "ingredients": [
+      "макароны",
+      "сыр",
+      "молоко"
+    ],
+    "price": 250.0,
+    "volume": 150.0,
+    "calories": 300.0
+  },
+  {
+    "name": "Куриные наггетсы",
+    "category": "KidsMeal",
+    "ingredients": [
+      "курица",
+      "панировка",
+      "соус"
+    ],
+    "price": 300.0,
+    "volume": 120.0,
+    "calories": 320.0
+  },
+  {
+    "name": "Лимонад",
+    "category": "NonAlcoholic",
+    "ingredients": [
+      "лимон",
+      "вода",
+      "сахар"
+    ],
+    "price": 100.0,
+    "volume": 250.0,
+    "calories": 150.0
+  },
+  {
+    "name": "Компот",
+    "category": "NonAlcoholic",
+    "ingredients": [
+      "ягоды",
+      "вода",
+      "сахар"
+    ],
+    "price": 80.0,
+    "volume": 300.0,
+    "calories": 100.0
+  },
+  {
+    "name": "Вино красное",
+    "category": "Alcoholic",
+    "ingredients": [
+      "виноград",
+      "вода"
+    ],
+    "price": 500.0,
+    "volume": 150.0,
+    "calories": 120.0
+  },
+  {
+    "name": "Пиво светлое",
+    "category": "Alcoholic",
+    "ingredients": [
+      "вода",
+      "солод",
+      "хмель"
+    ],
+    "price": 200.0,
+    "volume": 500.0,
+    "calories": 180.0
+  },
+  {
+    "name": "Салат Оливье",
+    "category": "Appetizer",
+    "ingredients": [
+      "картофель",
+      "морковь",
+      "огурцы",
+      "колбаса",
+      "майонез"
+    ],
+    "price": 250.0,
+    "volume": 180.0,
+    "calories": 300.0
+  },
+  {
+    "name": "Винегрет",
+    "category": "Appetizer",
+    "ingredients": [
+      "свекла",
+      "картофель",
+      "морковь",
+      "огурцы",
+      "лук"
+    ],
+    "price": 230.0,
+    "volume": 170.0,
+    "calories": 250.0
+  },
+  {
+    "name": "Тарталетки с икрой",
+    "category": "Appetizer",
+    "ingredients": [
+      "икра",
+      "тарталетки",
+      "масло"
+    ],
+    "price": 500.0,
+    "volume": 100.0,
+    "calories": 300.0
+  },
+  {
+    "name": "Рулетики с ветчиной",
+    "category": "Appetizer",
+    "ingredients": [
+      "ветчина",
+      "сыр",
+      "зелень"
+    ],
+    "price": 300.0,
+    "volume": 120.0,
+    "calories": 250.0
+  },
+  {
+    "name": "Бефстроганов",
+    "category": "MainCourse",
+    "ingredients": [
+      "говядина",
+      "лук",
+      "сливки",
+      "специи"
+    ],
+    "price": 900.0,
+    "volume": 250.0,
+    "calories": 500.0
+  },
+  {
+    "name": "Котлета по-киевски",
+    "category": "MainCourse",
+    "ingredients": [
+      "курица",
+      "масло",
+      "панировка",
+      "специи"
+    ],
+    "price": 850.0,
+    "volume": 230.0,
+    "calories": 600.0
+  },
+  {
+    "name": "Плов",
+    "category": "MainCourse",
+    "ingredients": [
+      "рис",
+      "мясо",
+      "морковь",
+      "специи"
+    ],
+    "price": 600.0,
+    "volume": 300.0,
+    "calories": 650.0
+  },
+  {
+    "name": "Гуляш",
+    "category": "MainCourse",
+    "ingredients": [
+      "говядина",
+      "лук",
+      "морковь",
+      "специи"
+    ],
+    "price": 550.0,
+    "volume": 250.0,
+    "calories": 550.0
+  },
+  {
+    "name": "Наполеон",
+    "category": "Dessert",
+    "ingredients": [
+      "тесто",
+      "сливки",
+      "сахар"
+    ],
+    "price": 450.0,
+    "volume": 150.0,
+    "calories": 400.0
+  },
+  {
+    "name": "Медовик",
+    "category": "Dessert",
+    "ingredients": [
+      "мед",
+      "тесто",
+      "сливки",
+      "сахар"
+    ],
+    "price": 400.0,
+    "volume": 180.0,
+    "calories": 450.0
+  },
+  {
+    "name": "Эклеры",
+    "category": "Dessert",
+    "ingredients": [
+      "тесто",
+      "сливки",
+      "шоколад"
+    ],
+    "price": 300.0,
+    "volume": 120.0,
+    "calories": 350.0
+  },
+  {
+    "name": "Пирожное Картошка",
+    "category": "Dessert",
+    "ingredients": [
+      "печенье",
+      "какао",
+      "сливки",
+      "water"
+    ],
+    "price": 250.0,
+    "volume": 100.0,
+    "calories": 320.0
+  },
+  {
+    "name": "Пюре с сосисками",
+    "category": "KidsMeal",
+    "ingredients": [
+      "картофель",
+      "сосиски",
+      "масло"
+    ],
+    "price": 250.0,
+    "volume": 200.0,
+    "calories": 300.0
+  },
+  {
+    "name": "Куриный суп",
+    "category": "KidsMeal",
+    "ingredients": [
+      "курица",
+      "картофель",
+      "морковь",
+      "макароны"
+    ],
+    "price": 220.0,
+    "volume": 300.0,
+    "calories": 250.0
+  },
+  {
+    "name": "Рис с курицей",
+    "category": "KidsMeal",
+    "ingredients": [
+      "рис",
+      "курица",
+      "специи"
+    ],
+    "price": 230.0,
+    "volume": 220.0,
+    "calories": 270.0
+  },
+  {
+    "name": "Молочная каша",
+    "category": "KidsMeal",
+    "ingredients": [
+      "крупа",
+      "молоко",
+      "сахар"
+    ],
+    "price": 180.0,
+    "volume": 200.0,
+    "calories": 200.0
+  },
+  {
+    "name": "Морс",
+    "category": "NonAlcoholic",
+    "ingredients": [
+      "ягоды",
+      "сахар",
+      "вода"
+    ],
+    "price": 90.0,
+    "volume": 250.0,
+    "calories": 120.0
+  },
+  {
+    "name": "Чай с лимоном",
+    "category": "NonAlcoholic",
+    "ingredients": [
+      "чай",
+      "лимон",
+      "сахар"
+    ],
+    "price": 50.0,
+    "volume": 200.0,
+    "calories": 30.0
+  },
+  {
+    "name": "Свежевыжатый сок",
+    "category": "NonAlcoholic",
+    "ingredients": [
+      "апельсин",
+      "water"
+    ],
+    "price": 12.0,
+    "volume": 200.0,
+    "calories": 80.0
+  },
+  {
+    "name": "Какао",
+    "category": "NonAlcoholic",
+    "ingredients": [
+      "молоко",
+      "какао",
+      "сахар"
+    ],
+    "price": 90.0,
+    "volume": 10.0,
+    "calories": 150.0
+  },
+  {
+    "name": "Коньяк",
+    "category": "Alcoholic",
+    "ingredients": [
+      "виноград",
+      "water"
+    ],
+    "price": 700.0,
+    "volume": 10.0,
+    "calories": 200.0
+  },
+  {
+    "name": "Шампанское",
+    "category": "Alcoholic",
+    "ingredients": [
+      "виноград",
+      "water"
+    ],
+    "price": 400.0,
+    "volume": 10.0,
+    "calories": 160.0
+  },
+  {
+    "name": "Водка",
+    "category": "Alcoholic",
+    "ingredients": [
+      "спирт",
+      "water"
+    ],
+    "price": 300.0,
+    "volume": 10.0,
+    "calories": 250.0
+  },
+  {
+    "name": "Виски",
+    "category": "Alcoholic",
+    "ingredients": [
+      "солод",
+      "вода"
+    ],
+    "price": 80.0,
+    "volume": 10.0,
+    "calories": 280.0
+  }
+]
