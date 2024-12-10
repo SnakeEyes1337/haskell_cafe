@@ -29,6 +29,11 @@ data Dish = Dish {
 
 type Menu = [Dish]
 
+data DishCount = DishCount {
+    dish :: Dish,
+    dishCount :: Int
+} deriving (Show)
+
 instance FromJSON Category where
     parseJSON (String "Appetizer") = return Appetizer
     parseJSON (String "MainCourse") = return MainCourse
@@ -75,10 +80,23 @@ prettyPrintDish (Dish name category ingredients price volume calories) =
   ", Калорийность: " ++ show calories ++ " ккал" ++
   ", Ингредиенты: " ++ unwords ingredients 
 
+prettyPrintDishCount :: DishCount -> String
+prettyPrintDishCount (DishCount (Dish name category ingredients price volume calories) dishCount) =
+  "Блюдо: " ++ name ++
+  ", Цена: " ++ show price ++ " руб./шт" ++
+  ", Количество: " ++ show dishCount 
+
+-- Функция для подсчета общей стоимости
+calculateTotalPrice :: [DishCount] -> Double
+calculateTotalPrice = foldr (\dishCounVal acc -> acc + (price (dish dishCounVal) * fromIntegral (dishCount dishCounVal))) 0.0
 
 -- Просмотр всего меню
 showMenu :: Menu -> IO ()
 showMenu menu = mapM_ (\(a0, d) -> putStrLn $prettyPrintDish d) $ zip [1..] menu
+
+-- Просмотр всего меню
+showBanketList :: [DishCount] -> IO ()
+showBanketList menu = mapM_ (\(a0, d) -> putStrLn $prettyPrintDishCount d) $ zip [1..] menu
 
 -- Фильтрация по категории
 filterByCategory :: Category -> Menu -> Menu
@@ -98,12 +116,13 @@ createBanquetList menu = do
     putStrLn "\nСоставление списка для банкета:"
     banquetList <- go [] menu
     putStrLn "\nИтоговый список блюд для банкета:"
-    showMenu banquetList
-    putStrLn $ "Общая стоимость: " ++ show (sum $ map price banquetList)
+    showBanketList banquetList
+    putStrLn $ "Общая стоимость: " ++ show (calculateTotalPrice banquetList)
   where
+    go :: [DishCount] -> Menu -> IO [DishCount]
     go acc menu = do
         putStrLn "\nТекущий список блюд:"
-        showMenu acc
+        showBanketList acc 
         putStrLn "\nДоступные команды:"
         putStrLn "1. Добавить блюдо"
         putStrLn "2. Фильтровать по категории"
@@ -117,7 +136,14 @@ createBanquetList menu = do
                 mapM_ (\(i, d) -> putStrLn $ show i ++ ". " ++ prettyPrintDish d) $ zip [1..] menu
                 num <- readLn
                 if num > 0 && num <= length menu
-                    then go (acc ++ [menu !! (num - 1)]) menu
+                   then do
+                        putStrLn "\nВведите необходимое количество:"
+                        newCount <- readLn
+                        if newCount > 0
+                            then go (acc ++ [DishCount (menu !! (num - 1)) newCount]) menu
+                            else do
+                                putStrLn "Количество должно быть больше 0"
+                                go acc menu
                     else do
                         putStrLn "Неверный номер блюда"
                         go acc menu
@@ -127,14 +153,16 @@ createBanquetList menu = do
                 putStrLn "3 - Детское меню, 4 - Безалкогольный напиток, 5 - Алкогольный напиток"
                 catNum <- readLn
                 let cat = toEnum catNum :: Category
-                go acc (filterByCategory cat menu)
+                fullMenu <- readMenuFromFile "menu.json"
+                go acc (filterByCategory cat fullMenu)
             "3" -> do
+                fullMenu <- readMenuFromFile "menu.json"
                 putStrLn "\nДоступные ингредиенты:"
-                putStrLn $ listAllIngredients menu
+                putStrLn $ listAllIngredients (fullMenu)
                 putStrLn "\nВведите ингредиент:"
                 ing <- getLine
                 putStrLn "\n"
-                go acc (filterByIngredient ing menu)
+                go acc (filterByIngredient ing fullMenu)
             "4" -> do
                 fullMenu <- readMenuFromFile "menu.json"
                 showMenu fullMenu
